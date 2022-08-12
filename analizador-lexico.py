@@ -2,10 +2,10 @@
 import re
 
 class AnalizadorLexico:
-    def __init__(self, lector, name):
-        self.lector=lector
+    def __init__(self, reader, name):
+        self.reader=reader
         self.archivo=name
-        self.texto=self.lector.texto
+        self.texto=self.reader.texto
         self.tokens={}
     
     def contadorLineas(self):
