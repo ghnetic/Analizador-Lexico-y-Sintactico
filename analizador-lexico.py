@@ -2,9 +2,9 @@
 import re
 
 class AnalizadorLexico:
-    def __init__(self, lector, nombre):
+    def __init__(self, lector, name):
         self.lector=lector
-        self.archivo=nombre
+        self.archivo=name
         self.texto=self.lector.texto
         self.tokens={}
     
