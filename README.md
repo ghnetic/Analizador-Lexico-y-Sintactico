@@ -59,7 +59,7 @@ $ git clone https://github.com/ghnetic/Analizador-Lexico-y-Sintactico/
 $ cd Proyecto Compiladores
 
 # Ejecutar la aplicación
-$ python main.py
+$ python3 main.py datos.txt
 ```
 
 
