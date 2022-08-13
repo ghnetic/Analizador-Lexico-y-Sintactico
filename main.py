@@ -35,6 +35,7 @@ if reader.instruction == None:
     print("\n* * * * * * * * * * A N A L I Z A D O R   L E X I C O * * * * * * * * *\n")
     tokens = Analizador_Lexico(
         reader, name).contadorLineas().tabla().patterns
+    print("Cantidad de tokens: ", len(tokens))
     encabezadoTabla = ['Numero de Linea', 'Token', 'Tipo de Token']
     if len(tokens) > 0:
         print(tabulate(tokens, encabezadoTabla, tablefmt="fancy_grid"))

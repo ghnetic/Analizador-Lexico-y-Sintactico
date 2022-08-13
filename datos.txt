@@ -1,8 +1,13 @@
 a = 3 + 2 $
 b = 2 * 'Hola' $
-prueba = 'prueba' $
+prueba = 'probando...' $
+valor1 = 'Compiladores' $
+valor2 = 'II' $
+valor3 = 'PAC' $
 
 imprimirResultado(2*'holamundo') $
+imprimirResultado(2+3) $
 imprimirResultado(prueba) $
 imprimirResultado(a) $
 imprimirResultado(b) $
+imprimirResultado(valor1.valor2.valor3) $

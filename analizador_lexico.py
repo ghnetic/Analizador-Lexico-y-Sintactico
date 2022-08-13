@@ -16,11 +16,11 @@ class Analizador_Lexico:
         linea = 0
         text = re.split(r"\n", self.text)
         for numLinea in text:
-            print(re.split(r"\s", numLinea.replace("\'", '')))
+            #print(re.split(r"\s", numLinea.replace("\'", '')))
             linea += 1
             self.tokens[linea] = re.split(r"\s", numLinea)
-        print(self.tokens)
-        print(linea)
+        #print(self.tokens)
+        print("Cantidad de lineas: ",linea)
         return self
 
     def tabla(self):

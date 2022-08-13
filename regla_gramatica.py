@@ -12,7 +12,7 @@ gramatica = """
         | variable "=" concatenacion "$" -> asignacion
         | "imprimirResultado" "("? cadena ")"? "$" -> imprimircadena
         | "imprimirResultado" "("? variable ")"? "$" -> imprimirvariable
-        | "imprimirResultado" "("? operacion ")"? "$" -> imprimirop
+        | "imprimirResultado" "("? operacion ")"? "$" -> imprimiroperacion
         | "imprimirResultado" "("? repeticion ")"? "$" ->imprimir
         | "imprimirResultado" "("? concatenacion ")"? "$" ->imprimir
 
