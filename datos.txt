@@ -1,14 +1,8 @@
-a = 8 + 2 + 8 $
-b = 5 * 'Palabra' $
-c = 'Soy' $
-d = 'feliz' $ 
-cafe = 'con esta clase' $
-h = 'buenas tardes ingeniero' $
+a = 3 + 2 $
+b = 2 * 'Hola' $
 prueba = 'prueba' $
 
+imprimirResultado(2*'holamundo') $
+imprimirResultado(prueba) $
 imprimirResultado(a) $
 imprimirResultado(b) $
-imprimirResultado(2*'casa') $
-imprimirResultado(c.d.cafe) $
-imprimirResultado(h) $
-imprimirResultado(prueba) $
