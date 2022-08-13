@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-grammar = """
+gramatica = """
     //Axioma inicial
     ?start: exp+
 
@@ -17,11 +17,11 @@ grammar = """
         | "imprimirResultado" "("? concatenacion ")"? "$" ->imprimir
 
     //Definicion de funcion repeticion
-    ?repeticion: numero "*" cadena -> repetir
+    ?repeticion: numero "*" cadena -> repeticion
 
     //Definicion de funcion concatenacion
     ?concatenacion: parametroconcat "." parametroconcat -> concatenar
-        | parametroconcat "." concatenacion -> concatenardos
+        | parametroconcat "." concatenacion -> concatenacion
     
     //Definición de operacion
     ?operacion: elemento

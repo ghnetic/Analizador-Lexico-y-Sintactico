@@ -2,21 +2,20 @@
 import re
 
 
-class AnalizadorLexico:
+class Analizador_Lexico:
     def __init__(self, reader, name):
         self.reader = reader
         self.archivo = name
         self.patterns = []
-        self.texto = self.reader.texto
+        self.text = self.reader.text
         self.tokens = {}
         self.t = ""
         self.contador = 0
 
     def contadorLineas(self):
         linea = 0
-        texto = re.split(r"\n", self.texto)
-        for numLinea in texto:
-            print("Probando contador...")
+        text = re.split(r"\n", self.text)
+        for numLinea in text:
             print(re.split(r"\s", numLinea.replace("\'", '')))
             linea += 1
             self.tokens[linea] = re.split(r"\s", numLinea)
@@ -24,7 +23,7 @@ class AnalizadorLexico:
         print(linea)
         return self
 
-    def tablaLexico(self):
+    def tabla(self):
         patterns = []
 
         for key in self.tokens:
@@ -111,7 +110,7 @@ class AnalizadorLexico:
     def buscarLineaErrorToken(self, token):
         lineaError = 0
 
-        f = open(self.fileName, 'r')
+        f = open(self.archivo, 'r')
         for linea in f:
             lineaError += 1
             if re.match(r'^.*%s.*$' % self.prevenir(token), linea):

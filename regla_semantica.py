@@ -27,14 +27,14 @@ class ReglaSemantica(Transformer):
         return int(num) * self.LimpiarParam(palabra)
         
     #Funciones para las operaciones de imprimir    
-    def imprimircadena(self, cadena):
+    def imprimiroperacion(self, cadena):
         print ("%s" % cadena)
 
-    def obtenervarible(self, variable):
+    def obtenervariable(self, variable):
         return self.var[variable]
 
     def imprimirvariable(self, variable):
-        print ("%s" % self.obtenervarible(variable))
+        print ("%s" % self.obtenervariable(variable))
 
     def imprimir(self, parametro):
         print ("%s" % self.LimpiarParam(parametro))

@@ -1,5 +1,6 @@
 from analizador_lexico import *
-from analizador_sintactico import tabulate
+from analizador_sintactico import *
+from tabulate import tabulate
 import sys
 
 
@@ -32,14 +33,14 @@ name = Reader().read().fileName
 
 if reader.instruction == None:
     print("\n* * * * * * * * * * A N A L I Z A D O R   L E X I C O * * * * * * * * *\n")
-    tokens = AnalizadorLexico(
-        reader, name).convertirArchivo().tablaLexico().patrones
-    encabezadoTabla = ['# Linea', 'Token', 'Descripcion']
+    tokens = Analizador_Lexico(
+        reader, name).contadorLineas().tabla().patterns
+    encabezadoTabla = ['Numero de Linea', 'Token', 'Tipo de Token']
     if len(tokens) > 0:
         print(tabulate(tokens, encabezadoTabla, tablefmt="fancy_grid"))
     else:
-        print("* * * * * No se pudo * * * * *")
+        print("* * * * * No se pudo :( * * * * *")
     print("\n* * * * * * * * * * A N A L I Z A D O R   S I N T A C T I C O * * * * * * * * * *\n")
-    AnalizadorSintactico(reader.text).run()
+    Analizador_Sintactico(reader.text).compilar()
 else:
     quit("Error")
