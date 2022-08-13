@@ -1,6 +1,5 @@
-from AnalizadorSintactico import *
-from AnalizadorLexico import *
-from tabulate import tabulate
+from analizador_lexico import *
+from analizador_sintactico import tabulate
 import sys
 
 class Reader():
@@ -10,6 +9,7 @@ class Reader():
         self.text = None
 
     def read(self):
+        #Para leer el archivo .txt
         self.params = sys.argv[1:]
 
         try:
@@ -29,17 +29,17 @@ reader = Reader().read()
 name = Reader().read().fileName
 
 if reader.instruction == None:
-    print("\n-----------------------        Analisis Lexico         -----------------------\n")
+    print("\n* * * * * * * * * * A N A L I Z A D O R   L E X I C O * * * * * * * * *\n")
     tokens = AnalizadorLexico(reader, name ).convertirArchivo().tablaAnalizadorLexico().patrones
     encabezadoTabla = ['# Linea','Token','Descripcion']
     if len(tokens) > 0:
-        print(tabulate(tokens, encabezadoTabla, tablefmt="grid"))
+        print(tabulate(tokens, encabezadoTabla, tablefmt="fancy_grid"))
     else:
-        print("----------------------------------------------------")
-    print("\n-----------------------        Analisis Sintactico         -----------------------\n")
+        print("* * * * * No se pudo * * * * *")
+    print("\n* * * * * * * * * * A N A L I Z A D O R   S I N T A C T I C O * * * * * * * * * *\n")
     AnalizadorSintactico(reader.text).run()
 else:
-    quit("No se esta especificando la  instrucción ")
+    quit("Error")
 
 
 
